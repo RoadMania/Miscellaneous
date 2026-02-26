@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('dataset.csv', header=None)
+df = pd.read_csv("C:\\Users\\***\\Downloads\\dataset.csv", header=None)
 print("Первые 5 строк датасета:")
 print(df.head())
 
