@@ -1,3 +1,3 @@
 # Miscellaneous
 
-Сгенерировать город в Minecraft: https://github.com/louis-e/arnis?tab=readme-ov-file
+Сгенерировать район города в Minecraft: https://github.com/louis-e/arnis?tab=readme-ov-file
