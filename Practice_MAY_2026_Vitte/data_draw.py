@@ -80,7 +80,7 @@ class DrawPlotApp:
         self.cmap_combo.grid(row=0, column=5, padx=5, pady=5)
         self.cmap_combo.bind('<<ComboboxSelected>>', lambda e: self.on_selection_change())
         
-        self.draw_btn = tk.Button(control_panel, text="🎨 Рисование", 
+        self.draw_btn = tk.Button(control_panel, text="Рисование", 
                                    command=self.toggle_drawing_mode,
                                    relief=tk.RAISED, bg='lightgray', width=12)
         self.draw_btn.grid(row=1, column=0, padx=5, pady=5)
@@ -101,7 +101,7 @@ class DrawPlotApp:
         self.width_label.grid(row=1, column=4, padx=5)
         self.width_scale.configure(command=self.update_width_label)
         
-        self.save_btn = ttk.Button(control_panel, text="💾 Сохранить", command=self.save_plot)
+        self.save_btn = ttk.Button(control_panel, text="Сохранить", command=self.save_plot)
         self.save_btn.grid(row=1, column=5, padx=20, pady=5)
         
         self.undo_btn = ttk.Button(control_panel, text="↩ Отменить (Ctrl+Z)", command=self.undo_last_line)
@@ -137,11 +137,11 @@ class DrawPlotApp:
     def toggle_drawing_mode(self):
         self.drawing_mode = not self.drawing_mode
         if self.drawing_mode:
-            self.draw_btn.config(relief=tk.SUNKEN, bg='lightgreen', text="✏️ Рисование (Вкл)")
+            self.draw_btn.config(relief=tk.SUNKEN, bg='lightgreen', text="Рисование (Вкл)")
             self.status_bar.config(text="Режим рисования ВКЛЮЧЕН. Нажмите правую кнопку мыши для выключения")
             self.canvas.get_tk_widget().config(cursor="pencil")
         else:
-            self.draw_btn.config(relief=tk.RAISED, bg='lightgray', text="🎨 Рисование")
+            self.draw_btn.config(relief=tk.RAISED, bg='lightgray', text="Рисование")
             self.status_bar.config(text="Режим рисования ВЫКЛЮЧЕН")
             self.canvas.get_tk_widget().config(cursor="")
             if self.temp_line:
@@ -269,7 +269,7 @@ class DrawPlotApp:
             self.canvas.draw()
             self.status_bar.config(text="Рисование линии...")
             
-        elif event.button == 3:  # Правая кнопка
+        elif event.button == 3:
             if self.drawing_mode:
                 self.toggle_drawing_mode()
     
