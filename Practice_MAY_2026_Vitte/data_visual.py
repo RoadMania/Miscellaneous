@@ -144,7 +144,7 @@ class VisualPlotApp:
         
         self.ax.clear()
         
-        cmap_obj = plt.cm.get_cmap(cmap)
+        cmap_obj = plt.colormaps[cmap]
         
         plot_titles = {
             'scatter': 'Точечная диаграмма',
