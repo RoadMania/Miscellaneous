@@ -184,7 +184,7 @@ class DrawPlotApp:
         plot_type = self.determine_plot_type(x_col, y_col)
         self.ax.clear()
         
-        cmap_obj = plt.cm.get_cmap(cmap)
+        cmap_obj = plt.colormaps[cmap]
         
         try:
             if plot_type == 'scatter':
